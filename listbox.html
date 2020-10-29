@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+	<link rel="stylesheet" href="./plugins/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/listbox.css">
+</head>
+<body>
+
+<div class="container container-wrapper" id="modalExportTemplate">
+	<div class="w37 content">
+		<p>Selectable Item</p>
+		<select multiple="multiple" class="listbox" id="selectable-list">
+			<!-- <option value="1"> 001 - 社員番号</option>
+			<option value="2"> 002 - 氏名</option>
+			<option value="3"> 003 - グループ</option>
+			<option value="4"> 004 - グループ</option>
+			<option value="5"> 005 - 出勤日数</option>
+			<option value="6"> 006 - 欠勤日数</option>
+			<option value="7"> 007 - 総労働時間</option>
+			<option value="8"> 008 - 総労働時間</option>
+			<option value="9"> 009 - 所定外労働時間</option>
+			<option value="10"> 010 - 深夜労働時間</option>
+			<option value="11"> 011 - 早出残業</option> -->
+		</select>
+	</div>
+
+	<div class="w17 text-center btn-selectgroup">
+		<button class="btn d-block btn-default btn-add" onclick="moveSelected()" > 
+			Move
+			<i class="fa fa-arrow-left fa-rotate-180" aria-hidden="true"></i>
+		</button>
+		<button class="btn d-block btn-default btn-remove" onclick="moveSelectable()" >
+			<i class="fa fa-arrow-left" aria-hidden="true"></i>
+			Move
+		</button>
+		<button class="btn d-block btn-default" onclick="addBlank()">Add Blank</button>
+		<button class="btn d-block btn-default" onclick="addZero()">Add Zero</button>
+	</div>
+
+	<div class="w37 content">
+		<p>Selected Item</p>
+		<select multiple="multiple" class="listbox" id="selection-list">
+
+		</select>
+	</div>
+
+	<div class="w8 text-center btn-selectgroup">
+		<button class="btn d-block btn-default btn-first" onclick="changeOrder('first')" disabled> 
+			<i class="fa fa-step-forward fa-rotate-270" aria-hidden="true"></i>
+		</button>
+	
+		<button class="btn d-block btn-default btn-up" onclick="changeOrder('up')" disabled>
+			<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		</button>
+	
+		<button class="btn d-block btn-default btn-down" onclick="changeOrder('down')" disabled>
+			<i class="fa fa-chevron-down" aria-hidden="true"></i>
+		</button>
+	
+		<button class="btn d-block btn-default btn-last" onclick="changeOrder('last')" disabled>
+			<i class="fa fa-step-forward fa-rotate-90" aria-hidden="true"></i>
+		</button>
+	</div>
+</div>
+
+
+<script src="./plugins/jquery/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./js/listbox.js"></script>
+
+</body>
+</html>
